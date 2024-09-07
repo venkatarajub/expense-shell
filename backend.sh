@@ -33,15 +33,15 @@ VALIDATE(){
 
 CHECK_ROOT
 
-echo -e "$Y Script executed on $(date)" | tee -a
+echo -e "$Y Script executed on $(date)" | tee -a $LOG_FILE
 
-dnf module disable nodejs -y
+dnf module disable nodejs -y &>>$LOG_FILE
 VALIDATE $? "disableing defult nodejs"
 
-dnf module enable nodejs:20 -y
+dnf module enable nodejs:20 -y &>>$LOG_FILE
 VALIDATE  $? "enabling nodejs"
 
-dnf install nodejs -y
+dnf install nodejs -y &>>$LOG_FILE
 VALIDATE $? "installing nodejs"
 
 useradd expense
