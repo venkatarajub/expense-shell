@@ -19,7 +19,7 @@ mkdir -p $LOG_FOLDER
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
-        echo -e "$R Run the script with root privilages $N" | tee -a $LOG_FILE
+        echo -e "$R Run the script with root privilages $N" 
         exit 1
     fi 
 }
