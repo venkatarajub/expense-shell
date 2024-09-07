@@ -75,7 +75,7 @@ VALIDATE $? "Copying the backend code"
 dnf install mysql -y &>>$LOG_FILE
 VALIDATE $? "Mysql claint installing"
 
-mysql -h 172.31.28.10 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE
+mysql -h 172.31.21.196 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE
 VALIDATE $? "Schema loading"
 
 systemctl daemon-reload &>>$LOG_FILE
