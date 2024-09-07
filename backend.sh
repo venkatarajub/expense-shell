@@ -17,9 +17,9 @@ mkdir -p $LOG_FOLDER
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
-        echo -e "$R Run the script with root privilages"
+        echo -e "$R Run the script with root privilages $N"
         exit 1
-    if
+    fi 
 }
 
 VALIDATE(){
@@ -29,6 +29,7 @@ VALIDATE(){
         exit 1
     else
         echo -e "$2 is ... $G SUCCESS $N"
+    fi 
 }
 
 CHECK_ROOT
